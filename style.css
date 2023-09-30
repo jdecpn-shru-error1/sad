@@ -8,6 +8,9 @@
     /* border: 3px solid red; */
     color: white;
 }
+.mainClass h2{
+  text-align: center;
+}
 .otherFont1{
     font-family: 'Playball', cursive;
 }
