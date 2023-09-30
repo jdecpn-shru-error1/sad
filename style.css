@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Aladin&family=Alumni+Sans:ital@1&family=Oswald:wght@300&family=Playball&display=swap');
+*{
+    font-family: 'Oswald', sans-serif;
+    font-size: 17px;
+}
+.mainClass{
+    padding: 25px;
+    /* border: 3px solid red; */
+    color: white;
+}
+.otherFont1{
+    font-family: 'Playball', cursive;
+}
+.otherFont2{
+    font-family: 'Aladin', cursive;
+}
+.otherFont3{
+    font-family: 'Akaya Telivigala', cursive;
+}
+.loader {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    position: relative;
+  }
+  .loader::after,
+  .loader::before {
+    content: '';  
+    box-sizing: border-box;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #FFF;
+    position: absolute;
+    left: 0;
+    top: 8px;
+    animation: animloader 0.8s linear infinite;
+  }
+  .loader::after {
+    animation-delay: 1s;
+  }
+  
+  @keyframes animloader {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+
+/* ============================= */
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #000;
+}
+
+.block {
+	position: relative;
+	margin: 5% auto 0;
+	width: 92%;
+	height: auto;
+	background: linear-gradient(0deg, #000, #272727);
+}
+
+.block:before, .block:after {
+	content: '';
+	position: absolute;
+	left: -2px;
+	top: -2px;
+	background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+		#0000ff, #00ff00,#ffff00, #ff0000);
+	background-size: 400%;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	z-index: -1;
+	animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+.block:after {
+	filter: blur(50px);
+}
